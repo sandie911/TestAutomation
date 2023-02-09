@@ -16,6 +16,8 @@ public class TestRunner {
         WebElement coursesTesting = driver.findElement(By.xpath("//a[contains(@href,'ithillel.ua/courses/testing')]"));
         wait.until(ExpectedConditions.elementToBeClickable(coursesTesting));
         coursesTesting.click();
+        WebElement coursesPageTitle = driver.findElement(By.className("block-profession_title"));
+        wait.until(ExpectedConditions.textToBePresentInElement(coursesPageTitle,"Професія QA engineer"));
         driver.quit();
     }
 }
