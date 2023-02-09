@@ -9,11 +9,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+
+
 public class WebDriverFactory {
     private static final String BROWSER = System.getProperty("browsers");
     private static WebDriver driver;
     public static WebDriver getDriver(){
         String browserType = BROWSER != null ? BROWSER : ConfigProvider.BROWSER;
+
         return getDriver(Browsers.valueOf(browserType.toUpperCase()));
     }
     public static WebDriver getDriver(Browsers browsers){
@@ -36,6 +39,7 @@ public class WebDriverFactory {
         if (driver==null){
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+
         }
         return driver;
    }
