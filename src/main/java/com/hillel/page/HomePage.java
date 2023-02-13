@@ -12,8 +12,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='section-content']")
     private String title;
     private String testingBtn = "//a[@href='https://ithillel.ua/courses/testing']";
-    private String courseTitlePath = "//span[@class='course-descriptor_course-text']";
-    private String courseRatePath = "//span[@class='course-rating_average']";
+
     public HomePage(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver, this);
@@ -30,14 +29,6 @@ public class HomePage extends BasePage {
         waitUntilElementIsVisible(super.driver, logo);
 
     }
-    public String getCourseTitle() {
-         WebElement courseTitle = super.driver.findElement(By.xpath(courseTitlePath));
-        return courseTitle.getText();
-    }
 
-    public String getCourseRate() {
-        WebElement courseRate = super.driver.findElement(By.xpath(courseRatePath));
-        return courseRate.getText();
-    }
 
 }
