@@ -12,7 +12,7 @@ import static com.hillel.util.WaitUtils.waitUntilElementIsVisible;
 public class TestingCourse extends BasePage {
     @FindBy(xpath = "//span[@class='course-descriptor_course-text']")
     private String titleQA;
-    private String courseTitlePath = "//span[@class='course-descriptor_course-text']";
+    public String courseTitlePath = "//span[@class='course-descriptor_course-text']";
     private String courseRatePath = "//span[@class='course-rating_average']";
     public TestingCourse(WebDriver driver){
         super(driver);
