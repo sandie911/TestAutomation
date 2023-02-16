@@ -1,5 +1,6 @@
 package com.hillel.page;
 
+import com.hillel.core.CommonMethods;
 import com.hillel.util.ConfigProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import static com.hillel.util.WaitUtils.waitUntilElementIsVisible;
 
 public class HomePage extends BasePage {
+    CommonMethods commonMethods = new CommonMethods();
     @FindBy(xpath = "//div[@class='section-content']")
     private String title;
     private String testingBtn = "//a[@href='https://ithillel.ua/courses/testing']";
@@ -28,6 +30,12 @@ public class HomePage extends BasePage {
         WebElement logo = super.driver.findElement(By.xpath(title));
         waitUntilElementIsVisible(super.driver, logo);
 
+    }
+    public void navigateToQA(){
+        commonMethods.NavigateTo("//section[2]//li[3]//a[contains(@href,'ithillel.ua/courses/qa-automation')]");
+    }
+    public void navigateToProgramming(){
+        commonMethods.NavigateToProgramming("//a[contains(@href,'ithillel.ua/courses/programming')]");
     }
 
 

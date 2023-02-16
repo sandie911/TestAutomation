@@ -40,4 +40,5 @@ public class TestingCourse extends BasePage {
         waitUntilElementIsVisible(super.driver, logo);
 
     }
+
 }
