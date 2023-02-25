@@ -7,6 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+
+import static com.hillel.util.WaitUtils.waitUntilElementIsClickable;
 import static com.hillel.util.WaitUtils.waitUntilElementIsVisible;
 
 public class HomePage extends BasePage {
@@ -14,6 +18,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='section-content']")
     private String title;
     private String testingBtn = "//a[@href='https://ithillel.ua/courses/testing']";
+
+      @FindBy(xpath = "//nav/ul/li[4]/a[contains(@href, '/blog.ithillel.ua')]")
+    private WebElement blog;
 
     public HomePage(WebDriver driver){
         super(driver);
@@ -27,8 +34,7 @@ public class HomePage extends BasePage {
 
     @Override
     public void ensureOpened() {
-        WebElement logo = super.driver.findElement(By.xpath(title));
-        waitUntilElementIsVisible(super.driver, logo);
+
 
     }
     public void navigateToQA(){
@@ -38,5 +44,10 @@ public class HomePage extends BasePage {
         commonMethods.NavigateToProgramming("//a[contains(@href,'ithillel.ua/courses/programming')]");
     }
 
+    public void navigateToBlog()
+    {
+        waitUntilElementIsClickable(driver, blog);
+        blog.click();
 
+    }
 }
