@@ -22,9 +22,9 @@ public class JunitTest extends BaseTest {
 
     private static Stream<Arguments> provideStringsForCommonNews() {
         return Stream.of(
-                Arguments.of("//section[2]//li[5]/a[contains(@href, '/publications/gamedev')]", 5),
-                Arguments.of("//section[2]//li[1]/a[contains(@href, '/publications/frontend')]", 9),
-                Arguments.of("//section[2]//li[9]/a[contains(@href, '/publications/qa')]", 9)
+                Arguments.of("gamedev", 5),
+                Arguments.of("frontend", 9),
+                Arguments.of("qa", 9)
         );
     }
 }

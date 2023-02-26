@@ -31,8 +31,9 @@ public class BlogPage extends BasePage {
     public void ensureOpened() {
 
     }
-    public void navigateToBlogPublications(String xpath)
+    public void navigateToBlogPublications(String publicationName)
     {
+        String xpath = String.format("//section[2]//li//a[contains(@href, '/publications/%s')]", publicationName);
         WebElement link = driver.findElement(By.xpath(xpath));
         waitUntilElementIsClickable(driver, link);
         link.click();
