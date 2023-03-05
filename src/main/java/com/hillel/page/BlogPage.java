@@ -38,7 +38,7 @@ public class BlogPage extends BasePage {
         waitUntilElementIsClickable(driver, link);
         link.click();
     }
-   public int getCommonNewsSize(){
+    public int getCommonNewsSize(){
         return commonNews.size();
     }
 }

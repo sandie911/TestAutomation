@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Name">
+    <test name="TestNg">
+        <packages>
+            <package name="testNg"></package>
+        </packages>
+        <classes>
+            <class name="testNg.BaseTest"/>
+            <class name="testNg.TestNgClass"/>
+        </classes>
+    </test>
+</suite>
