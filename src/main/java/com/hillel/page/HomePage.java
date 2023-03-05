@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.hillel.util.WaitUtils.waitUntilElementIsClickable;
 import static com.hillel.util.WaitUtils.waitUntilElementIsVisible;
@@ -19,13 +20,23 @@ public class HomePage extends BasePage {
     private String title;
     private String testingBtn = "//a[@href='https://ithillel.ua/courses/testing']";
 
-      @FindBy(xpath = "//nav/ul/li[4]/a[contains(@href, '/blog.ithillel.ua')]")
+    @FindBy(xpath = "//nav/ul/li[4]/a[contains(@href, '/blog.ithillel.ua')]")
     private WebElement blog;
+
+
+    @FindBy(xpath = "//ul[@class='block-course-cats_list']/li")
+    private List<WebElement> courseCategories;
+
+
 
     public HomePage(WebDriver driver){
         super(driver);
         PageFactory.initElements(driver, this);
     }
+    public List<WebElement> getCourseCategories() {
+        return courseCategories;
+    }
+
     @Override
     public void open() {
         super.driver.get(ConfigProvider.BASE_URL);
