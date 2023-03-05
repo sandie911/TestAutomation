@@ -1,8 +1,0 @@
-2023-03-05 19:48:09.852 [main] INFO  testNg.BaseTest - Test testNgCommonNews started
-2023-03-05 19:48:13.419 [main] INFO  testNg.BaseTest - Test testNgCommonNews finished with result SUCCESS
-2023-03-05 19:48:13.420 [main] INFO  testNg.BaseTest - Test testNgCommonNews started
-2023-03-05 19:48:15.443 [main] INFO  testNg.BaseTest - Test testNgCommonNews finished with result SUCCESS
-2023-03-05 19:48:15.444 [main] INFO  testNg.BaseTest - Test testNgCommonNews started
-2023-03-05 19:48:17.130 [main] INFO  testNg.BaseTest - Test testNgCommonNews finished with result SUCCESS
-2023-03-05 19:48:17.131 [main] INFO  testNg.BaseTest - Test testNgCourseCategories started
-2023-03-05 19:48:17.679 [main] INFO  testNg.BaseTest - Test testNgCourseCategories finished with result SUCCESS
