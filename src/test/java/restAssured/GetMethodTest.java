@@ -7,17 +7,14 @@ import org.junit.jupiter.api.Test;
 import static org.testng.Assert.assertEquals;
 
 public class GetMethodTest extends BaseApiTest{
-    private void getRequest(String page, int x, String s) {
-        try{
+    private void getRequest(String page, int userID, String path) {
+
             response = RestAssured.given()
                     .contentType(ContentType.JSON)
                     .when()
-                    .queryParam(page, x)
-                    .get(s);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+                    .queryParam(page, userID)
+                    .get(path);
+
         response.prettyPrint();
     }
     @Test

@@ -8,16 +8,13 @@ import static org.testng.Assert.assertEquals;
 
 
 public class PostMethodTest extends BaseApiTest{
-        private void postRequest(String s) {
-        try {
+        private void postRequest(String path) {
+
             response = RestAssured.given()
                     .contentType(ContentType.JSON)
                     .body(userPojo)
-                    .post(s);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+                    .post(path);
+
         System.out.println("Response:" + response.asString());
     }
     @Test
