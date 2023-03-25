@@ -2,7 +2,6 @@ package testNg;
 import com.hillel.core.data.DataProviderMethods;
 import com.hillel.page.BlogPage;
 import com.hillel.page.HomePage;
-import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,7 +21,7 @@ public class TestNgClass extends BaseTest{
         homePage.open();
         homePage.navigateToBlog();
         blogPage.navigateToBlogPublications(xpath);
-        Assertions.assertEquals(expected, blogPage.getCommonNewsSize(), "");
+        Assert.assertEquals(expected, blogPage.getCommonNewsSize(), "");
     }
 
     }
